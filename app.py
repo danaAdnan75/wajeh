@@ -2252,12 +2252,12 @@ def verify_sms():
         return jsonify({'success': False, 'error': 'رمز التحقق غير صحيح'})
 
 if __name__ == '__main__':
-    # Initialize database on startup
+    # تهيئة قاعدة البيانات عند التشغيل
     init_database()
-    print("Database initialized with sample data:")
-    print("ID: 1234567899, Phone: 0501234567, SMS Code: 8421")
-    print("ID: 9876543210, Phone: 0559876543, SMS Code: 8421")
-    print("ID: 1111222233, Phone: 0541112222, SMS Code: 8421")
-    print("ID: 5555666677, Phone: 0505556666, SMS Code: 8421")
-    print("\nStarting server on http://localhost:5000")
-    app.run(debug=True, port=5000)
+    
+    # هذا الجزء ضروري جداً لكي يعمل الرابط على Render
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    
+    # تشغيل التطبيق على المنفذ الصحيح والعنوان العام
+    app.run(host='0.0.0.0', port=port)
