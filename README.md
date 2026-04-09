@@ -1,4 +1,4 @@
-# Wajh (وجه)
+# Wajh (وَجٌه)
 
 An integrated smart system designed to bridge the gap between educational outcomes and labor market needs. Wajh aims to achieve balance by providing early career guidance and predicting future job trends.
 
